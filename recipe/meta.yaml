@@ -1,5 +1,5 @@
 {% set name = "dependency_injector" %}
-{% set version = "4.36.0" %}
+{% set version = "4.38.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dependency-injector-{{ version }}.tar.gz
-  sha256: a5f6090062c7d19947a65fad932f37992cc8a8558d375f040322b72b244a135f
+  sha256: bab4c323d822d3fc9936e8eb3c2f5553d75e9efdadac11d5b293a016e31a1477
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
