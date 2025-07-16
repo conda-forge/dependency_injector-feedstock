@@ -1,4 +1,4 @@
-About dependency-injector-feedstock
+About dependency_injector-feedstock
 ===================================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dependency_injector-feedstock/blob/main/LICENSE.txt)
@@ -207,53 +207,53 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-dependency--injector-green.svg)](https://anaconda.org/conda-forge/dependency-injector) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dependency-injector.svg)](https://anaconda.org/conda-forge/dependency-injector) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dependency-injector.svg)](https://anaconda.org/conda-forge/dependency-injector) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dependency-injector.svg)](https://anaconda.org/conda-forge/dependency-injector) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dependency__injector-green.svg)](https://anaconda.org/conda-forge/dependency_injector) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dependency_injector.svg)](https://anaconda.org/conda-forge/dependency_injector) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dependency_injector.svg)](https://anaconda.org/conda-forge/dependency_injector) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dependency_injector.svg)](https://anaconda.org/conda-forge/dependency_injector) |
 
-Installing dependency-injector
+Installing dependency_injector
 ==============================
 
-Installing `dependency-injector` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `dependency_injector` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `dependency-injector` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `dependency_injector` can be installed with `conda`:
 
 ```
-conda install dependency-injector
-```
-
-or with `mamba`:
-
-```
-mamba install dependency-injector
-```
-
-It is possible to list all of the versions of `dependency-injector` available on your platform with `conda`:
-
-```
-conda search dependency-injector --channel conda-forge
+conda install dependency_injector
 ```
 
 or with `mamba`:
 
 ```
-mamba search dependency-injector --channel conda-forge
+mamba install dependency_injector
+```
+
+It is possible to list all of the versions of `dependency_injector` available on your platform with `conda`:
+
+```
+conda search dependency_injector --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search dependency_injector --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search dependency-injector --channel conda-forge
+mamba repoquery search dependency_injector --channel conda-forge
 
-# List packages depending on `dependency-injector`:
-mamba repoquery whoneeds dependency-injector --channel conda-forge
+# List packages depending on `dependency_injector`:
+mamba repoquery whoneeds dependency_injector --channel conda-forge
 
-# List dependencies of `dependency-injector`:
-mamba repoquery depends dependency-injector --channel conda-forge
+# List dependencies of `dependency_injector`:
+mamba repoquery depends dependency_injector --channel conda-forge
 ```
 
 
@@ -298,17 +298,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating dependency-injector-feedstock
+Updating dependency_injector-feedstock
 ======================================
 
-If you would like to improve the dependency-injector recipe or build a new
+If you would like to improve the dependency_injector recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/dependency-injector-feedstock are
+Note that all branches in the conda-forge/dependency_injector-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
