@@ -1,5 +1,6 @@
 {% set name = "dependency_injector" %}
-{% set version = "4.41.0" %}
+{% set version = "4.48.1" %}
+{% set hash = "1805185e4522effad6d5e348c255d27e80d3f8adc89701daf13d743367392978" %}
 
 
 package:
@@ -7,31 +8,38 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dependency-injector-{{ version }}.tar.gz
-  sha256: 939dfc657104bc3e66b67afd3fb2ebb0850c9a1e73d0d26066f2bbdd8735ff9c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ hash }}
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: true  # [py<38]
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython >=3.1.1                         # [build_platform != target_platform]
+    - {{ compiler("c") }}
+    - {{ stdlib("c") }}
   host:
-    - pip
     - python
+    - pip
+    - setuptools
+    - cython >=3.1.1
   run:
     - python
-    - six >=1.7.0,<=1.16.0
+    - typing-extensions  # [py<311]
 
 test:
+  requires:
+    - pip
   imports:
     - dependency_injector
     - dependency_injector.ext
   commands:
     - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/ets-labs/python-dependency-injector
