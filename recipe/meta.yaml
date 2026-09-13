@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/d/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b4614fa3731ffec00a381aebc1d17317b0a3a407aa679f164a3ea03c347de691
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   skip: true  # [py<38]
 
